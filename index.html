@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Animated Icons</title>
+    <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+    <style>
+       #chain{
+           font-size: 50px;
+       }
+       #toggle{
+           font-size: 50px;
+       }
+    </style>
+</head>
+<body>
+   <div id="chain" class="fa"></div>
+   <div id="toggle" class="fa"></div>
+   <script>
+      function chargeBattery(){
+        let chain = document.querySelector('#chain');
+        chain.innerHTML ="&#xf244";
+        setTimeout(function(){
+            chain.innerHTML ="&#xf243";
+        },1000);
+        setTimeout(function(){
+            chain.innerHTML ="&#xf242";
+        },2000);
+        setTimeout(function(){
+            chain.innerHTML ="&#xf241";
+        },3000);
+        setTimeout(function(){
+            chain.innerHTML ="&#xf240";
+        },4000);
+      }
+      chargeBattery();
+     setInterval(chargeBattery, 5000);
+     function toggle(){
+        let toggle = document.querySelector('#toggle');
+        toggle.innerHTML = "&#xf205";
+        setTimeout(() => {
+            toggle.innerHTML = "&#xf204";
+        }, 4000);
+     }
+     toggle();
+     setInterval(toggle, 5000);
+   </script>
+</body>
+</html>
